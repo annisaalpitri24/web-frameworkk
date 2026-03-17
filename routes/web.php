@@ -63,3 +63,10 @@ Route ::get('/perulangan', function(){
     return view('akademik.perulangan',compact('nama','nim','total_nilai'));
 });
 
+Route ::get('/perulangan', function(){
+    $nama='Bill Gates';
+    $nim='2022180001';
+    $total_nilai =[80,70,20,60,45];
+    return view('akademik.perulangan',compact('nama','nim','total_nilai'));
+});
+
