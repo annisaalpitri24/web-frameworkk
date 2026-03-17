@@ -31,7 +31,7 @@
                 <div class="alert alert-info d-inline-block"> {{ $nilai }} </div>
             @endforeach -->
 
-                <h4>Nama = {{ $nama }}, Nim = {{ $nim }}</h4>
+                <!--<h4>Nama = {{ $nama }}, Nim = {{ $nim }}</h4>
                 Nilai = |
             @forelse ($total_nilai as $val)
                 @if (($val >= 0) and ($val <50))
@@ -42,7 +42,25 @@
                 @endif
                 @empty
               <div class="alert alert-danger d-inline-block"> Data tidak valid </div>
-            @endforelse
+            @endforelse-->
+
+            <!--<h4>Nama = {{ $nama }}, Nim = {{ $nim }}</h4>
+                Nilai = 
+                @foreach ($total_nilai as $nilai)
+                @if ($nilai < 50)
+                @continue
+                @endif
+                <div class="alert alert-danger d-inline-block"> {{ $nilai }} </div>
+                @endforeach -->
+
+                <h4>Nama = {{ $nama }}, Nim = {{ $nim }}</h4>
+                Nilai = 
+                @foreach ($total_nilai as $nilai)
+                @if ($nilai < 50)
+                @break
+                @endif
+                <div class="alert alert-danger d-inline-block"> {{ $nilai }} </div>
+                @endforeach
             </div>
         </div>
     </body>
