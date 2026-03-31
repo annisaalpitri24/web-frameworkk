@@ -20,7 +20,8 @@
                         <a class="nav-link" href="/dosen">Dosen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/prodi">Prodi</a>
+                        <a class="nav-link" href="{{route('prodi',['jurusan'=>'Teknologi Informasi',
+                        'prodi'=>'TRPL'])}}">Prodi</a>
                     </li>
                 </ul>
             </div>
