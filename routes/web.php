@@ -26,9 +26,9 @@ Route::get('/mahasiswa/{nama}/{nim}', function($nama, $nim){
     return "Selamat Datang $nama, Nim: $nim";
 });
 
-Route::get('/dosen/{nama?}/{nip?}', function($nama="", $nip=""){
-    return "Selamat Datang $nama, Nip: $nip";
-});
+//Route::get('/dosen/{nama?}/{nip?}', function($nama="", $nip=""){
+  //  return "Selamat Datang $nama, Nip: $nip";
+//});
 
 Route::redirect('/home','/');
 
@@ -79,9 +79,18 @@ Route::get('/mahasiswa', function(){
 Route::get('/dosen', function(){
     $arrDosen=['Ronal hadi','Deni S','Fazrol R','Deddy P',
     'Ervan A', 'Cipto P'];
-    return view('akademik.dosen',['mhs'=>$arrDosen]);
-});
 
-Route::get('/prodi', function (){
-    return view('akademik.prodi');
+    return view('akademik.dosen',['dosen'=>$arrDosen]);
 });
+//Route::get('/prodi', function (){
+  //  return view('akademik.prodi');
+//});
+
+//Route::get('/pnp/jurusan/ti/prodi', function (){
+  //  return view('akademik.prodi');
+//})->name('prodi');
+
+Route::get('/pnp/{jurusan}/{prodi}', function ($jurusan,$prodi){
+    $data=[$jurusan,$prodi];
+   return view('akademik.prodi')->with('data',$data);
+})->name('prodi');
