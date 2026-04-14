@@ -47,7 +47,7 @@ Route::get('/cek-objek', [MahasiswaController::class, 'cekObjek']);
 Route::get('/insert', [MahasiswaController::class, 'insert']);
 Route::get('/mass-assignment', [MahasiswaController::class, 'massAssignment']);
 
-Route::get('/update', [MahasiswaController::class, 'update']);
+Route::get('/updates', [MahasiswaController::class, 'update']);
 Route::get('/update-where', [MahasiswaController::class, 'updateWhere']);
 Route::get('/mass-update', [MahasiswaController::class, 'massUpdate']);
 
