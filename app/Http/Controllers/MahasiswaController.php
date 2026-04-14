@@ -136,4 +136,13 @@ public function selectView()
         );
         dump($mahasiswa1);
     }
+    public function updates()
+    {
+        $mahasiswa = Mahasiswa::find(1);
+        $mahasiswa->tempat_lahir = 'Padang';
+        $mahasiswa->tgl_lahir = '2001-01-01';
+        $mahasiswa->save();
+
+        dump($mahasiswa);
+    }
 }
