@@ -47,11 +47,11 @@ Route::get('/cek-objek', [MahasiswaController::class, 'cekObjek']);
 Route::get('/insert', [MahasiswaController::class, 'insert']);
 Route::get('/mass-assignment', [MahasiswaController::class, 'massAssignment']);
 
-Route::get('/updates', [MahasiswaController::class, 'update']);
+Route::get('/updates', [MahasiswaController::class, 'updates']);
 Route::get('/update-where', [MahasiswaController::class, 'updateWhere']);
 Route::get('/mass-update', [MahasiswaController::class, 'massUpdate']);
 
-Route::get('/delete', [MahasiswaController::class, 'delete']);
+Route::get('/delete', [MahasiswaController::class, 'deleted']);
 Route::get('/destroy', [MahasiswaController::class, 'destroy']);
 Route::get('/mass-delete', [MahasiswaController::class, 'massDelete']);
 
@@ -70,6 +70,8 @@ Route::get('/soft-delete', [MahasiswaController::class, 'softDelete']);
 Route::get('/with-trashed', [MahasiswaController::class, 'withTrashed']);
 Route::get('/restore', [MahasiswaController::class, 'restore']);
 Route::get('/force-delete', [MahasiswaController::class, 'forceDelete']);
+
+Route::get('/mhs', [MahasiswaController::class, 'indexs']);
 
 //
 //Route::get('/home', function(){
