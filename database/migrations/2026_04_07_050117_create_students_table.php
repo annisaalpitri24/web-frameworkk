@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('ipk', 3, 2);
             $table->string('alamat');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
